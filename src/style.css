@@ -1,9 +1,13 @@
-.hello {
-  color: yellow;
+p,
+.Footer,
+h1 {
+  color: white;
 }
 body {
-  background-color: blueviolet;
+  background-color: black;
 }
-.divteste {
-  color: red;
+
+img {
+  height: 500px;
+  width: 500px;
 }
