@@ -4,17 +4,20 @@ import { aboutpg } from "./aboutpg";
 
 export function headerBuild(dive) {
   const element = document.createElement("div");
-  element.classList.add("Header");
+  element.classList.add("header");
 
   const nome = document.createElement("h1");
   nome.innerHTML = "Ari's Cantina";
 
-  const menu = document.createElement("div");
+  const menu = document.createElement("ul");
   menu.classList.add("menu");
 
   const btnHome = document.createElement("BUTTON");
   const btnMenu = document.createElement("button");
-  const btnAbout = document.createElement("button");
+  const btnAbout = document.createElement("button"); /* 
+  const btnHomeDiv = document.createElement("div");
+  const btnMenuDiv = document.createElement("div");
+  const btnAboutDiv = document.createElement("div"); */
 
   btnHome.innerHTML = "Home";
   btnMenu.innerHTML = "Menu";
