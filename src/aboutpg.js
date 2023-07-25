@@ -1,17 +1,26 @@
-export function homepg() {
+import Gatos from "./Gatos.jpeg";
+
+export function aboutpg() {
   const element = document.createElement("div");
   const titulo = document.createElement("h1");
-  titulo.innerHTML = "Shhh...it's okay";
-  const textoEimg = document.createElement("div");
-
-  const cantina = new Image();
-  cantina.src = Imagem;
-  const texto = document.createElement("p");
-  texto.innerHTML = `"Ari's Cantina was envisioned with the purpose of providing food at accessible prices, offering affordable and cruelty-free options. It aims to be a nice and quiet place for those who are tired of their everyday lives. Ari's Cantina aspires to be a safe haven for everyone."`;
-  textoEimg.appendChild(texto);
-  textoEimg.appendChild(cantina);
-
+  titulo.innerHTML = "About Ari's Cantina";
+  const conteudoAbout = document.createElement("div");
+  //texto e foto da Ari
+  const divAri = document.createElement("div");
+  const textAri = document.createElement("p");
+  textAri.innerHTML = "The one and only Ari the Creator, the visionary";
+  divAri.appendChild(textAri);
+  conteudoAbout.appendChild(divAri);
+  //texto e foto dos gatos
+  const divGatos = document.createElement("div");
+  const textGatos = document.createElement("p");
+  const gatos = new Image();
+  gatos.src = Gatos;
+  textGatos.innerHTML = "Guardians of  Ari's Cantina";
+  divGatos.appendChild(textGatos);
+  divGatos.appendChild(gatos);
+  conteudoAbout.appendChild(divGatos);
   element.appendChild(titulo);
-  element.appendChild(textoEimg);
+  element.appendChild(conteudoAbout);
   return element;
 }

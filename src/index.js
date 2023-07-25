@@ -3,15 +3,16 @@ import "./style.css";
 import { headerBuild, footerBuild } from "./header";
 import { homepg } from "./homepg";
 import { menupg } from "./menupg";
+import { aboutpg } from "./aboutpg";
 
-function component() {
-  const element = document.createElement("div");
-
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("hello");
-
-  return element;
+function pageLoader() {
+  const dive = document.createElement("div");
+  document.body.appendChild(dive);
+  dive.appendChild(headerBuild(dive));
+  dive.appendChild(homepg());
+  dive.appendChild(footerBuild());
 }
-document.body.appendChild(headerBuild());
-//document.body.appendChild(menupg());
-document.body.appendChild(footerBuild());
+pageLoader();
+/* dive.appendChild(headerBuild());
+dive.appendChild(aboutpg());
+dive.appendChild(footerBuild()); */

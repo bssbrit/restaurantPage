@@ -1,4 +1,8 @@
-export function headerBuild() {
+import { homepg } from "./homepg";
+import { menupg } from "./menupg";
+import { aboutpg } from "./aboutpg";
+
+export function headerBuild(dive) {
   const element = document.createElement("div");
   element.classList.add("Header");
 
@@ -15,6 +19,33 @@ export function headerBuild() {
   btnHome.innerHTML = "Home";
   btnMenu.innerHTML = "Menu";
   btnAbout.innerHTML = "About";
+
+  btnHome.addEventListener("click", function () {
+    console.log("hi");
+
+    dive.removeChild(dive.children[1]);
+    dive.removeChild(dive.children[1]);
+    dive.appendChild(homepg());
+    dive.appendChild(footerBuild());
+  });
+
+  btnMenu.addEventListener("click", function () {
+    console.log("hi");
+
+    dive.removeChild(dive.children[1]);
+    dive.removeChild(dive.children[1]);
+    dive.appendChild(menupg());
+    dive.appendChild(footerBuild());
+  });
+
+  btnAbout.addEventListener("click", function () {
+    console.log("hi");
+
+    dive.removeChild(dive.children[1]);
+    dive.removeChild(dive.children[1]);
+    dive.appendChild(aboutpg());
+    dive.appendChild(footerBuild());
+  });
 
   menu.append(btnHome, btnMenu, btnAbout);
 
