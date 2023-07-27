@@ -5,22 +5,29 @@ import Dish4 from "./dishe4.jpg";
 
 export function menupg() {
   const element = document.createElement("div");
+  element.classList.add("menu");
   const titulo = document.createElement("h1");
+  titulo.classList.add("tituloMenu");
   titulo.innerHTML = "Dishes";
 
   //Pratos
   //div do cardapio
   const cardapio = document.createElement("div");
+
+  cardapio.classList.add("cardapio");
   //div prato 1 com a sua imagem
   const divDish1 = document.createElement("div");
+  divDish1.classList.add("prato");
   const dish1 = new Image();
   dish1.src = Dish1;
   const textoDish1 = document.createElement("p");
-  textoDish1.innerHTML = "Um prato vegano numero 1";
+  textoDish1.innerHTML =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing eLorem .";
   divDish1.appendChild(dish1);
   divDish1.appendChild(textoDish1);
   //div prato 2 com a sua imagem
   const divDish2 = document.createElement("div");
+  divDish2.classList.add("prato");
   const dish2 = new Image();
   dish2.src = Dish2;
   const textoDish2 = document.createElement("p");
@@ -29,6 +36,7 @@ export function menupg() {
   divDish2.appendChild(textoDish2);
   //div prato 3
   const divDish3 = document.createElement("div");
+  divDish3.classList.add("prato");
   const dish3 = new Image();
   dish3.src = Dish3;
   const textoDish3 = document.createElement("p");
@@ -38,6 +46,7 @@ export function menupg() {
 
   //div prato4
   const divDish4 = document.createElement("div");
+  divDish4.classList.add("prato");
   const dish4 = new Image();
   dish4.src = Dish4;
   const textoDish4 = document.createElement("p");

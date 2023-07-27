@@ -10,7 +10,7 @@ export function headerBuild(dive) {
   nome.innerHTML = "Ari's Cantina";
 
   const menu = document.createElement("ul");
-  menu.classList.add("menu");
+  menu.classList.add("menuHeader");
 
   const btnHome = document.createElement("BUTTON");
   const btnMenu = document.createElement("button");

@@ -7,10 +7,11 @@ import { aboutpg } from "./aboutpg";
 
 function pageLoader() {
   const dive = document.createElement("div");
-  document.body.appendChild(dive);
+  dive.classList.add("content");
   dive.appendChild(headerBuild(dive));
-  dive.appendChild(homepg());
+  dive.appendChild(menupg());
   dive.appendChild(footerBuild());
+  document.body.appendChild(dive);
 }
 pageLoader();
 /* dive.appendChild(headerBuild());
